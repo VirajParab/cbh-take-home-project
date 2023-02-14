@@ -19,6 +19,22 @@ You will be graded on the level of detail in each ticket, the clarity of the exe
 
 Tasks:
 1: Add custom ID column as string to Agents table.
-2: Update API to add unique custom ID for agents for specific facility from facilities admin.
+
+
+2: Update API (create agent and update agent) to add unique custom ID for agents for specific facility from facilities admin.
+    - Given I am a facility admin 
+    When I am registering or updating the agent in the system 
+    I should be able to create or update the agent with custom ID
+    then the custom ID should get reflected in the agents table.
+
+Depends on  task: 1
+
 3: Update getShiftsByFacility to return agents custom ID in the agent metadata in the response.
+
+
+Depends on  task: 1,2
+
 4: Update the generateReport to include agent custom ID in the response PDF.
+
+
+Depends on  task: 1,2,3
