@@ -9,3 +9,11 @@ You've been asked to refactor the function `deterministicPartitionKey` in [`dpk.
 You will be graded on the exhaustiveness and quality of your unit tests, the depth of your refactor, and the level of insight into your thought process provided by the written explanation.
 
 ## Your Explanation Here
+
+I have refactored encryption logic as a separate method as it was used multiple times in the code. This separate method also encapsulates the secure hash algorithm and encoding, hence there are very less chances of it getting changes anywhere else in the code. Also string those constant will help giving names to the Magic strings in the code. 
+
+I have separated the two main logics of the code which is creation of the trivial partition key looking at the provided partition key and other where generating the trivial partition key if the partition key is not provided.
+
+I have extracted the logic of generating the key from the partition key as a separate method which will help us scale the validation logic for the partition key in future.
+
+The main deterministicPartitionKey method looks simple and readable which just takes in event check if partition key is provided and returns trivial partition key.
