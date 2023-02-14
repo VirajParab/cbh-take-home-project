@@ -16,3 +16,9 @@ Based on the information given, break this ticket down into 2-5 individual ticke
 You will be graded on the level of detail in each ticket, the clarity of the execution plan within and between tickets, and the intelligibility of your language. You don't need to be a native English speaker, but please proof-read your work.
 
 ## Your Breakdown Here
+
+Tasks:
+1: Add custom ID column as string to Agents table.
+2: Update API to add unique custom ID for agents for specific facility from facilities admin.
+3: Update getShiftsByFacility to return agents custom ID in the agent metadata in the response.
+4: Update the generateReport to include agent custom ID in the response PDF.
